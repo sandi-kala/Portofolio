@@ -1,21 +1,22 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaGithub, FaFigma, FaNpm, FaWordpress } from "react-icons/fa"
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiGraphql,
-  SiRedux,
-  SiJest,
-  SiWebpack,
-  SiVercel,
-  SiFirebase,
-  SiFramer,
-  SiSass,
+import { 
+  FaFileExcel, 
+  FaFileWord, 
+  FaFilePowerpoint, 
+  FaDatabase,
+  FaCalculator,
+  FaAdobe
+} from "react-icons/fa"
+import { 
+  SiCanva, 
+  SiAdobephotoshop, 
+  SiAdobeillustrator, 
+  SiAdobeaftereffects 
 } from "react-icons/si"
-import { TbBrandReactNative } from "react-icons/tb"
-import { MdDesignServices } from "react-icons/md"
+import { TbReportMoney } from "react-icons/tb"
+import { MdAccountBalance } from "react-icons/md"
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false)
@@ -46,30 +47,23 @@ export default function Skills() {
   }, [])
 
   const skills = [
-    { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26]" size={36} /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6]" size={36} /> },
-    { name: "JavaScript", icon: <FaJs className="text-[#F7DF1E]" size={36} /> },
-    { name: "React", icon: <FaReact className="text-[#61DAFB]" size={36} /> },
-    { name: "Next.js", icon: <SiNextdotjs size={36} /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" size={36} /> },
-    { name: "WordPress", icon: <FaWordpress className="text-[#3178C6]" size={36} /> },
-    { name: "UI/UX Design", icon: <MdDesignServices className="text-purple-500" size={36} /> },
+    { name: "Microsoft Excel", icon: <FaFileExcel className="text-[#217346]" size={36} /> },
+    { name: "Microsoft Word", icon: <FaFileWord className="text-[#2B579A]" size={36} /> },
+    { name: "Microsoft PowerPoint", icon: <FaFilePowerpoint className="text-[#D24726]" size={36} /> },
+    { name: "Microsoft Access", icon: <FaDatabase className="text-[#A4373A]" size={36} /> },
   ]
 
-  const technologies = [
-    { name: "Git", icon: <FaGitAlt className="text-[#F05032]" size={24} /> },
-    { name: "GitHub", icon: <FaGithub size={24} /> },
-    { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" size={24} /> },
-    // { name: "React Native", icon: <TbBrandReactNative className="text-[#61DAFB]" size={24} /> },
-    // { name: "GraphQL", icon: <SiGraphql className="text-[#E10098]" size={24} /> },
-    { name: "Redux", icon: <SiRedux className="text-[#764ABC]" size={24} /> },
-    // { name: "Jest", icon: <SiJest className="text-[#C21325]" size={24} /> },
-    { name: "Webpack", icon: <SiWebpack className="text-[#8DD6F9]" size={24} /> },
-    { name: "npm", icon: <FaNpm className="text-[#CB3837]" size={24} /> },
-    { name: "Vercel", icon: <SiVercel size={24} /> },
-    // { name: "Firebase", icon: <SiFirebase className="text-[#FFCA28]" size={24} /> },
-    // { name: "Framer", icon: <SiFramer size={24} /> },
-    { name: "SASS/SCSS", icon: <SiSass className="text-[#CC6699]" size={24} /> },
+  const accountingSoftware = [
+    { name: "MYOB", icon: <MdAccountBalance className="text-[#E11C2A]" size={24} /> },
+    { name: "Atlas Audit", icon: <TbReportMoney className="text-[#3366CC]" size={24} /> },
+    { name: "Accurate", icon: <FaCalculator className="text-[#FFA500]" size={24} /> },
+  ]
+
+  const editingSoftware = [
+    { name: "Canva", icon: <SiCanva className="text-[#00C4CC]" size={24} /> },
+    { name: "Photoshop", icon: <SiAdobephotoshop className="text-[#31A8FF]" size={24} /> },
+    { name: "Illustrator", icon: <SiAdobeillustrator className="text-[#FF9A00]" size={24} /> },
+    { name: "After Effects", icon: <SiAdobeaftereffects className="text-[#9999FF]" size={24} /> },
   ]
 
   return (
@@ -81,8 +75,7 @@ export default function Skills() {
             <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Skills</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            I've worked with a variety of technologies in the web development world. Here's an overview of my technical
-            skills and expertise.
+            I have some skills that i develop in
           </p>
         </div>
 
@@ -92,9 +85,9 @@ export default function Skills() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Core Skills with icons */}
+          {/* Microsoft Office Skills */}
           <div>
-            <h3 className="text-xl font-semibold mb-8 text-center">Core Competencies</h3>
+            <h3 className="text-xl font-semibold mb-8 text-center">Microsoft</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
               {skills.map((skill) => (
                 <div
@@ -108,17 +101,33 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* Other technologies */}
+          {/* Accounting Software */}
           <div className="mt-8">
-            <h3 className="text-xl font-semibold mb-8 text-center">Technologies & Tools</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-              {technologies.map((tech) => (
+            <h3 className="text-xl font-semibold mb-8 text-center">Accounting Software</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-8">
+              {accountingSoftware.map((software) => (
                 <div
-                  key={tech.name}
-                  className="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:-translate-y-1"
+                  key={software.name}
+                  className="flex flex-col items-center justify-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 hover:-translate-y-2"
                 >
-                  <div className="mb-2">{tech.icon}</div>
-                  <span className="text-sm text-center">{tech.name}</span>
+                  <div className="mb-4">{software.icon}</div>
+                  <h4 className="font-medium text-center">{software.name}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Editing Software */}
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold mb-8 text-center">Editing Software</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
+              {editingSoftware.map((software) => (
+                <div
+                  key={software.name}
+                  className="flex flex-col items-center justify-center p-6 bg-gray-800 rounded-xl hover:bg-gray-700 transition-all duration-300 hover:-translate-y-2"
+                >
+                  <div className="mb-4">{software.icon}</div>
+                  <h4 className="font-medium text-center">{software.name}</h4>
                 </div>
               ))}
             </div>
@@ -128,4 +137,3 @@ export default function Skills() {
     </section>
   )
 }
-

@@ -18,9 +18,9 @@ export default function Hero() {
     if (!textElement) return;
 
     const roles = [
-      "Frontend Developer",
-      "Next.js Specialist",
-      "Tailwind CSS Expert",
+      "Final-year Accounting Student",
+      "Accounting Spesialist",
+      "Ex-Junior Auditor Intern",
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -53,7 +53,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-gradient-to-b from-purple-950 via-blue-950 to-gray-900"
     >
       <div className="container px-4 md:px-6 z-10">
         <span className={`px-4 py-1 mb-4 rounded-full text-sm font-medium ${SECONDARY_BG} ${TEXT_SECONDARY}`}>
@@ -61,8 +61,8 @@ export default function Hero() {
         </span>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-          Hi, I'm <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-            Essam Mohamed
+          Hi, I'm <span className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent">
+            Nur Aulia Firdausha
           </span>
         </h1>
 
@@ -71,22 +71,21 @@ export default function Hero() {
         </div>
 
         <p className={`max-w-2xl ${TEXT_TERTIARY} mb-10 mx-auto`}>
-          I create engaging, responsive, and user-friendly web experiences
-          with modern technologies and clean code.
+          Final-year student at Bandung State Polytechnic (Associate Degree)
         </p>
 
         <div className="flex justify-center items-center flex-col sm:flex-row gap-4">
           <Link
             href="#projects"
-            className={`px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 transition-all hover:scale-105`}
+            className={`px-6 py-3 rounded-lg ${PRIMARY_GRADIENT} ${TEXT_PRIMARY} font-medium shadow-lg shadow-blue-400 hover:shadow-blue-500 transition-all hover:scale-105`}
           >
-            View My Work
+            Lihat Hasil Kerja Saya
           </Link>
           <Link
             href="#contact"
             className={`px-6 py-3 rounded-lg ${SECONDARY_BG} ${TEXT_PRIMARY} font-medium transition-all hover:scale-105`}
           >
-            Contact Me
+            Kontak Saya
           </Link>
         </div>
       </div>

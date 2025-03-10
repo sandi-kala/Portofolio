@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react"
+import { Menu, X, Github, Linkedin, Instagram } from "lucide-react"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,9 +19,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
+    { name: "About Me", href: "#about" },
     { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -32,8 +32,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-              Dev<span className="text-white">Portfolio</span>
+            <span className="bg-gradient-to-r from-green-300 to-blue-500 bg-clip-text text-transparent">
+              naf<span className="text-white">ate</span>
             </span>
           </Link>
 
@@ -52,15 +52,7 @@ export default function Navbar() {
           {/* Social Icons */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/nur-aulia-firdausha/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
@@ -68,12 +60,12 @@ export default function Navbar() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://twitter.com"
+              href="http://instagram.com/nurauliafird/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-all hover:-translate-y-1 duration-200"
             >
-              <Twitter size={20} />
+              <Instagram size={20} />
             </a>
           </div>
 
@@ -104,15 +96,7 @@ export default function Navbar() {
             ))}
             <div className="flex space-x-4 pt-4 border-t border-gray-800">
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <Github size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/nur-aulia-firdausha/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -120,12 +104,12 @@ export default function Navbar() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://twitter.com"
+                href="http://instagram.com/nurauliafird/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
               >
-                <Twitter size={20} />
+                <Instagram size={20} />
               </a>
             </div>
           </nav>
@@ -134,4 +118,3 @@ export default function Navbar() {
     </header>
   )
 }
-
